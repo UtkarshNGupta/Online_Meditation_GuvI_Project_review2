@@ -1,31 +1,31 @@
-Meditation & Mindfulness Journal Application
-A robust, enterprise-grade web application built using Jakarta EE 10 architecture. This platform provides users with a centralized digital space to authenticate, manage mindfulness sessions, and maintain a persistent personal reflection journal.
+ # 🧘 Meditation & Mindfulness Journal App
 
-🌟 Core Functionality
-Secure Authentication: Implements session-based security for user login and registration.
+A professional, high-performance web application built with **Jakarta EE 10** architecture. This platform provides a secure environment for users to manage meditation sessions and maintain a persistent digital journal.
 
-Journal Management: Allows users to record, store, and retrieve daily mindfulness notes.
+## 🌟 Core Features
+* **Secure Authentication**: Session-based login and registration system.
+* **Mindfulness Journaling**: Persistent storage for daily reflection notes.
+* **State Management**: Secure user context handling via `HttpSession`.
+* **MVC Architecture**: Clean separation between business logic and views.
 
-Session State Persistence: Utilizes HttpSession to maintain user context across the application dashboard.
+## 🛠️ Technical Stack
+* **Backend**: Java 17+ (Jakarta Servlet API 6.0)
+* **Database**: MySQL 8.0 with Connector/J 8.0.33
+* **Server**: Apache Tomcat 10.1.50+
+* **Build Tool**: Apache Maven
 
-Unified Controller Logic: Centralized Servlet-based routing to handle business logic and view forwarding.
 
-🏗️ Technical Architecture
-The project follows the Model-View-Controller (MVC) design pattern to ensure a clean separation of concerns:
 
-Model: Persistent data handling via JDBC and the DBConnection utility class.
+## 📁 Project Structure
+* `com.app.DBConnection`: Database utility and connection pooling.
+* `com.app.LoginServlet`: Authentication controller mapped to `/login`.
+* `com.app.RegisterServlet`: User onboarding controller mapped to `/register`.
+* `com.app.JournalServlet`: Data persistence controller for journal entries.
+* `webapp/`: Presentation layer containing JSP and CSS resources.
 
-View: Dynamic user interfaces rendered using JavaServer Pages (JSP) and CSS.
 
-Controller: Jakarta Servlets (LoginServlet, RegisterServlet, JournalServlet) managing the request-response lifecycle.
 
-💻 Tech Stack
-Language: Java 17+
-
-Specification: Jakarta EE 10 (Servlet API 6.0)
-
-Server: Apache Tomcat 10.1.50+
-
-Database Driver: MySQL Connector/J 8.0.33
-
-Build System: Apache Maven
+## 🚀 Deployment Requirements
+1.  **Servlet Container**: Use Apache Tomcat 10.1+ for **jakarta.\*** namespace support.
+2.  **Environment**: Ensure `JDK 17` or higher is configured in your IDE.
+3.  **Dependencies**: Run `mvn clean install` to resolve all required libraries.
